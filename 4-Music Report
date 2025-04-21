@@ -1,0 +1,19 @@
+## Which insights did you gain from your EDA? Were any columns highly correlated? If so, name them.
+### *In the Bivariate analysis between Genre and Release year: The Hip Hop genre has the highest median release year (around 2010-2011) and its entire Interquartile Range falls roughly between 2000 and 2017. This indicates that the majority of hip hop tracks in this dataset are from the 21st century.Overall, the plot shows clear differences in the typical release eras represented for each genre within this dataset, with a noticeable shift towards more recent years for genres like Reggae and especially Hip Hop compared to others like Country, Blues, or Jazz.*
+### *In Bivariate analysis btw Genre Vs Topic: Pop has the highest overall count of topic instances. Genres like Blues, Country, Jazz, and Reggae show a more diverse mix of topics compared to the specialization seen in Hip Hop and Rock.Topics like 'sadness' and 'world/life' appear frequently across multiple genres.*
+### *Based on the  heatmap (correlation matrix), here are some insights
+### Sadness & Feelings --Correlation: 0.64 . Songs that express sadness also strongly convey other feelings.
+### Sadness & Romantic -- Negative correlation . Songs that are more romantic tend to be less sad, and vice versa.
+### Obscene & Communication --0.79 
+### Movement/places & Music -- Correlation: 0.31
+#### A mild correlation showing songs talking about places/movement may also focus more on music themes.
+### Age & Romantic -- Correlation: -0.21
+### Older audiences might be linked to slightly more romantic content.*
+
+## How did you determine which columns to drop or keep? If your EDA informed this process, explain which insights you used to determine which columns were not needed. 
+
+### **To determine which columns to drop or keep, I relied on insights from Exploratory Data Analysis (EDA). I dropped non-numeric and  columns that have lot of unique values like lyrics, artist_name, and track_name, which don’t contribute meaningfull to clustering and can introduce noise. I kept the numerical columns that represent song characteristics or theme scores (like romantic, violence, feelings, etc.), as these provide structured information useful for clustering. **
+
+## What was the optimal number of clusters in your cluster model? Explain how you determined this value.
+
+### *While the Elbow Method is shows  k=4 or k=5, the Silhouette Score clearly indicates that k=10 is the optimal number of clusters among the tested values, as it yields the highest score (0.140). Therefore, based primarily on the Silhouette analysis, the optimal number of clusters determined was 10.*
